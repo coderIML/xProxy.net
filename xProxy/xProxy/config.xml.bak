@@ -1,0 +1,21 @@
+<xProxy>
+  <Version value="1.0" />
+  <Settings>
+    <authorize value="never" />
+    <admin_hash value="Gh3JHJBzJcaScd3wyUS8cg==" />
+    <config_ip value="localhost" />
+    <config_port value="4" />
+    <errorlog value="errors.log" />
+  </Settings>
+  <Users>
+    <user value="myhash" />
+    <pieter value="WhBei51A4TKXgNYuoiZdig==" />
+    <kris value="X03MO1qnZdYdgyfeuILPmQ==" />
+  </Users>
+  <Listeners>
+    <listener type="xProxy.Http.HttpListener" value="host:0.0.0.0;int:100" />
+    <listener type="xProxy.Ftp.FtpListener" value="host:0.0.0.0;int:21" />
+    <listener type="xProxy.Socks.SocksListener" value="host:0.0.0.0;int:1080;authlist" />
+    <listener type="xProxy.PortMap.PortMapListener" value="host:0.0.0.0;int:12345;host:msnews.microsoft.com;int:119" />
+  </Listeners>
+</xProxy>

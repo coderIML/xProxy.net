@@ -1,0 +1,22 @@
+<XProxy>
+  <Version value="1.0" />
+  <Settings>
+    <admin_hash value="Gh3JHJBzJcaScd3wyUS8cg==" />
+    <config_port value="4" />
+    <errorlog value="errors.log" />
+    <config_ip value="localhost" />
+    <authorize value="never" />
+  </Settings>
+  <Users>
+    <pieter value="WhBei51A4TKXgNYuoiZdig==" />
+    <user value="myhash" />
+    <kris value="X03MO1qnZdYdgyfeuILPmQ==" />
+    <test value="xMpCOKC5I4INzFCab3WEmw==" />
+  </Users>
+  <Listeners>
+    <listener type="xProxy.Http.HttpListener" value="host:127.0.0.1;int:100" />
+    <listener type="xProxy.Ftp.FtpListener" value="host:127.0.0.1;int:21" />
+    <listener type="xProxy.Socks.SocksListener" value="host:127.0.0.1;int:1080;authlist" />
+    <listener type="xProxy.PortMap.PortMapListener" value="host:127.0.0.1;int:12345;host:111.13.129.37;int:80" />
+  </Listeners>
+</XProxy>

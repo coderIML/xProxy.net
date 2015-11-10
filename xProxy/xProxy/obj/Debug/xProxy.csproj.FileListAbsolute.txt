@@ -1,0 +1,8 @@
+D:\workspace\xProxy\xProxy\bin\Debug\xProxy.exe.config
+D:\workspace\xProxy\xProxy\obj\Debug\xProxy.csprojResolveAssemblyReference.cache
+D:\workspace\xProxy\xProxy\obj\Debug\xProxy.Properties.Resources.resources
+D:\workspace\xProxy\xProxy\obj\Debug\xProxy.csproj.GenerateResource.Cache
+D:\workspace\xProxy\xProxy\bin\Debug\xProxy.exe
+D:\workspace\xProxy\xProxy\bin\Debug\xProxy.pdb
+D:\workspace\xProxy\xProxy\obj\Debug\xProxy.exe
+D:\workspace\xProxy\xProxy\obj\Debug\xProxy.pdb

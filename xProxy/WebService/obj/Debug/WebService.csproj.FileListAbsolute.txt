@@ -1,0 +1,11 @@
+D:\workspace\WebService\WebService\bin\WebService.dll
+D:\workspace\WebService\WebService\bin\WebService.pdb
+D:\workspace\WebService\WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache
+D:\workspace\WebService\WebService\obj\Debug\WebService.dll
+D:\workspace\WebService\WebService\obj\Debug\WebService.pdb
+D:\workspace\xProxy\WebService\bin\WebService.dll
+D:\workspace\xProxy\WebService\bin\WebService.pdb
+D:\workspace\xProxy\WebService\bin\MySql.Data.dll
+D:\workspace\xProxy\WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache
+D:\workspace\xProxy\WebService\obj\Debug\WebService.dll
+D:\workspace\xProxy\WebService\obj\Debug\WebService.pdb
