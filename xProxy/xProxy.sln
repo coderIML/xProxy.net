@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xProxy", "xProxy\xProxy.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{7CBFD137-95CE-44E7-963C-878499468A2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyService", "ProxyService\ProxyService.csproj", "{D928947E-7CE6-41EE-8570-531088AE9EAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{7CBFD137-95CE-44E7-963C-878499468A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CBFD137-95CE-44E7-963C-878499468A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CBFD137-95CE-44E7-963C-878499468A2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D928947E-7CE6-41EE-8570-531088AE9EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D928947E-7CE6-41EE-8570-531088AE9EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D928947E-7CE6-41EE-8570-531088AE9EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D928947E-7CE6-41EE-8570-531088AE9EAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

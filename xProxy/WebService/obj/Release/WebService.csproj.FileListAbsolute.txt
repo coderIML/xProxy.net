@@ -4,3 +4,8 @@ D:\workspace\xProxy\WebService\bin\MySql.Data.dll
 D:\workspace\xProxy\WebService\obj\Release\WebService.dll
 D:\workspace\xProxy\WebService\obj\Release\WebService.pdb
 D:\workspace\xProxy\WebService\obj\Release\WebService.csprojResolveAssemblyReference.cache
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\WebService\bin\WebService.dll
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\WebService\bin\WebService.pdb
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\WebService\bin\MySql.Data.dll
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\WebService\obj\Release\WebService.dll
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\WebService\obj\Release\WebService.pdb
