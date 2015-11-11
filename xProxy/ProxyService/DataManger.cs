@@ -6,79 +6,90 @@ using System.Web;
 
 namespace ProxyService
 {
-    public class DataManger
+    public class DataManger : IDisposable
     {
         SqlConnection conn;
+        public void Dispose()
+        {
+            if (conn != null)
+            {
+                conn.Dispose();
+                conn = null;
+            }
+        }
         public DataManger(string connStr)
         {
             conn = new SqlConnection(connStr);
             conn.Open();
         }
-        public void SaveToHttp(RegisterEntiy regInfo)
+        public bool AddProxy(RegisterEntiy info)
         {
             var cmd = conn.CreateCommand();
-            cmd.CommandText = "INSERT INTO THttp VALUES(@ip,@port)";
-            SqlParameter ip = new SqlParameter("@ip", regInfo.Ip);
-            SqlParameter port = new SqlParameter("@port", regInfo.Port);
+            cmd.CommandText = "INSERT INTO TProxyClient VALUES(@Ip,@HttpPort,@SocketPort,@UName,@UPwd,@Time)";
+            SqlParameter ip = new SqlParameter("@Ip", info.Ip);
+            SqlParameter httpPort = new SqlParameter("@HttpPort", info.HttpPort);
+            SqlParameter socketPort = new SqlParameter("@SocketPort", info.SocketPort);
+            SqlParameter uName = new SqlParameter("@UName", info.UName);
+            SqlParameter uPwd = new SqlParameter("@UPwd", info.UPwd);
+            SqlParameter time = new SqlParameter("@Time", DateTime.Now.TimeOfDay.ToString());
             cmd.Parameters.Add(ip);
-            cmd.Parameters.Add(port);
+            cmd.Parameters.Add(httpPort);
+            cmd.Parameters.Add(socketPort);
+            cmd.Parameters.Add(uName);
+            cmd.Parameters.Add(uPwd);
+            cmd.Parameters.Add(time);
             try
             {
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception e)
-            {
-
-            }
-            finally
+            catch
             {
                 cmd.Dispose();
+                return false;
             }
+            cmd.Dispose();
+            return true;
         }
-        public void SaveToSocket(RegisterEntiy regInfo)
+        public void DeleteProxy(string ip)
         {
             var cmd = conn.CreateCommand();
-            cmd.CommandText = "INSERT INTO TSocket VALUES(@ip,@port,@uname,@upwd)";
-            SqlParameter ip = new SqlParameter("@ip", regInfo.Ip);
-            SqlParameter port = new SqlParameter("@port", regInfo.Port);
-            SqlParameter uname = new SqlParameter("@uname", regInfo.UName);
-            SqlParameter upwd = new SqlParameter("@upwd", regInfo.UPwd);
-            cmd.Parameters.Add(ip);
-            cmd.Parameters.Add(port);
-            cmd.Parameters.Add(uname);
-            cmd.Parameters.Add(upwd);
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-
-            }
-            finally
-            {
-                cmd.Dispose();
-            }
-        }
-        public void DeleteProxy(string ip, string port)
-        {
-            var cmd = conn.CreateCommand();
-            cmd.CommandText = "DELETE FROM THttp WHERE Ip=@ip and Port=@port;DELETE FROM TSocket WHERE Ip=@ip and Port=@port";
+            cmd.CommandText = "DELETE FROM TProxyClient WHERE Ip=@ip";
             SqlParameter Ip = new SqlParameter("@ip", ip);
-            SqlParameter Port = new SqlParameter("@port", port);
-            cmd.Parameters.Add(ip);
-            cmd.Parameters.Add(port);
+            cmd.Parameters.Add(Ip);
             try
             {
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception e)
+            catch
             {
             }
             finally
             {
                 cmd.Dispose();
             }
+        }
+        public bool HeartBeat(string ip)
+        {
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = "UPDATE TProxyClient SET Time=@time WHERE Ip=@ip";
+            SqlParameter Ip = new SqlParameter("@ip", ip);
+            SqlParameter time = new SqlParameter("@time", DateTime.Now.TimeOfDay.ToString());
+            cmd.Parameters.Add(Ip);
+            cmd.Parameters.Add(time);
+            int count = 0;
+            try
+            {
+                count = cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                cmd.Dispose();
+                return false;
+            }
+            if (count == 0)
+                return false;
+            else
+                return true;
         }
     }
 }

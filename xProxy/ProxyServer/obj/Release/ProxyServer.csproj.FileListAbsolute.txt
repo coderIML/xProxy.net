@@ -1,0 +1,11 @@
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyServer\bin\Release\ProxyServer.exe
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyServer\bin\Release\ProxyServer.pdb
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyServer\obj\Release\ProxyServer.csprojResolveAssemblyReference.cache
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyServer\obj\Release\ProxyServer.frmMain.resources
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyServer\obj\Release\ProxyServer.Properties.Resources.resources
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyServer\obj\Release\ProxyServer.csproj.GenerateResource.Cache
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyServer\obj\Release\ProxyServer.exe
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyServer\obj\Release\ProxyServer.pdb
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyServer\bin\Release\ProxyService.dll
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyServer\bin\Release\ProxyService.pdb
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyServer\bin\Release\ProxyServer.exe.config

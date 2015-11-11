@@ -11,7 +11,8 @@ using xProxy;
 using xProxy.Http;
 using xProxy.Socks;
 using xProxy.Socks.Authentication;
-using xProxy.ServiceReference1;
+using ProxyService;
+using System.ServiceModel;
 namespace xProxy {
 	
 	public struct ListenEntry {
@@ -29,7 +30,17 @@ namespace xProxy {
 		
 		public static void Main() {
 			try {
-
+                using (ChannelFactory<IProxyService> channel = new ChannelFactory<IProxyService>("ProxyClient"))
+                {
+                    var proxy = channel.CreateChannel();
+                    RegisterEntiy info = new RegisterEntiy();
+                    info.HttpPort = 100;
+                    info.Ip = GetIP();
+                    info.SocketPort = 0;
+                    info.UName = "fewef";
+                    info.UPwd = "123";
+                    bool re=proxy.RegisterProxy(info);
+                }
 				Proxy prx = new Proxy();
 				prx.Start();
 			} catch {
@@ -116,7 +127,6 @@ namespace xProxy {
             httpport = arr[0];
             sock5port = arr[1];
 
-            DataServiceSoapClient ds = new DataServiceSoapClient();
             // HTTP´úÀí
             Listener listener = null;
             listener = CreateListener("xProxy.Http.HttpListener",string.Format("host:{0};int:{1}",IP,httpport));
@@ -128,8 +138,8 @@ namespace xProxy {
                 }
                 catch { }
                 AddListener(listener);
-                ds.HttpToDb(IP, httpport.ToString());
-                ds.DelHttp(oldip, oldHttpPort);
+                //ds.HttpToDb(IP, httpport.ToString());
+                //ds.DelHttp(oldip, oldHttpPort);
             }
             
             
@@ -147,8 +157,8 @@ namespace xProxy {
                 }
                 catch { }
                 AddListener(listener);
-                ds.Socks5ToDb(IP, sock5port.ToString(), Name,Pwd);
-                ds.DelSocks5(oldip, oldSocksPort);
+                //ds.Socks5ToDb(IP, sock5port.ToString(), Name,Pwd);
+                //ds.DelSocks5(oldip, oldSocksPort);
             }
         }
 		public void Start() {

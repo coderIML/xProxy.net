@@ -9,3 +9,4 @@ C:\Users\Wen\Documents\GitHub\xProxy\xProxy\WebService\bin\WebService.pdb
 C:\Users\Wen\Documents\GitHub\xProxy\xProxy\WebService\bin\MySql.Data.dll
 C:\Users\Wen\Documents\GitHub\xProxy\xProxy\WebService\obj\Release\WebService.dll
 C:\Users\Wen\Documents\GitHub\xProxy\xProxy\WebService\obj\Release\WebService.pdb
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\WebService\obj\Release\WebService.csprojResolveAssemblyReference.cache

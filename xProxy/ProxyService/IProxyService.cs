@@ -14,13 +14,13 @@ namespace ProxyService
     {
 
         [OperationContract]
-        void RegisterProxy(RegisterEntiy regInfo,string type);
+        bool RegisterProxy(RegisterEntiy regInfo);
 
         [OperationContract]
-        void HeartBeatMessage(HeartBeatEntity heartBeatInfo);
+        bool HeartBeatMessage(string ip);
 
         [OperationContract]
-        void CancelProxy(string ip,string port);
+        void CancelProxy(string ip);
     }
 
 
@@ -28,49 +28,15 @@ namespace ProxyService
     [DataContract]
     public class RegisterEntiy
     {
-        string ip = string.Empty;
-        int port=0;
-        string uname = string.Empty;
-
         [DataMember]
-        public string Ip
-        {
-            get { return ip; }
-            set { ip = value; }
-        }
-
+        public string Ip { get; set; }
         [DataMember]
-        public int Port
-        {
-            get { return port; }
-            set { port = value; }
-        }
-
+        public int HttpPort { get; set; }
         [DataMember]
-        public string UName
-        {
-            get { return uname; }
-            set { uname = value; }
-        }
-        string upwd = string.Empty;
-
+        public int SocketPort { get; set; }
         [DataMember]
-        public string UPwd
-        {
-            get { return upwd; }
-            set { upwd = value; }
-        }
-    }
-
-    [DataContract]
-    public class HeartBeatEntity
-    {
-        string id;
+        public string UName { get; set; }
         [DataMember]
-        public string Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
+        public string UPwd { get; set; }
     }
 }

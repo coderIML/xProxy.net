@@ -11,6 +11,8 @@ C:\Users\Wen\Documents\GitHub\xProxy\xProxy\xProxy\obj\Release\xProxy.exe
 C:\Users\Wen\Documents\GitHub\xProxy\xProxy\xProxy\obj\Release\xProxy.pdb
 C:\Users\Wen\Documents\GitHub\xProxy\xProxy\xProxy\bin\Release\xProxy.exe
 C:\Users\Wen\Documents\GitHub\xProxy\xProxy\xProxy\bin\Release\xProxy.pdb
-C:\Users\Wen\Documents\GitHub\xProxy\xProxy\xProxy\obj\Release\xProxy.csprojResolveAssemblyReference.cache
 C:\Users\Wen\Documents\GitHub\xProxy\xProxy\xProxy\obj\Release\xProxy.Properties.Resources.resources
 C:\Users\Wen\Documents\GitHub\xProxy\xProxy\xProxy\obj\Release\xProxy.csproj.GenerateResource.Cache
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\xProxy\bin\Release\ProxyService.dll
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\xProxy\bin\Release\ProxyService.pdb
+C:\Users\Wen\Documents\GitHub\xProxy\xProxy\xProxy\obj\Release\xProxy.csprojResolveAssemblyReference.cache

@@ -18,29 +18,20 @@ namespace ProxyService
             string connStr = ConfigurationManager.ConnectionStrings["ProxyDbString"].ConnectionString;
             dataManager = new DataManger(connStr);
         }
-        public void RegisterProxy(RegisterEntiy regInfo, string type)
+
+        public bool RegisterProxy(RegisterEntiy regInfo)
         {
-            switch (type)
-            {
-                case "HTTP":
-                    dataManager.SaveToHttp(regInfo);
-                    break;
-                case "SOCKET":
-                    dataManager.SaveToSocket(regInfo);
-                    break;
-                default:
-                    break;
-            }
+            return dataManager.AddProxy(regInfo);
         }
 
-        public void HeartBeatMessage(HeartBeatEntity heartBeatInfo)
+        public bool HeartBeatMessage(string ip)
         {
-
+            return dataManager.HeartBeat(ip);
         }
 
-        public void CancelProxy(string ip,string port)
+        public void CancelProxy(string ip)
         {
-            dataManager.DeleteProxy(ip, port);
+            dataManager.DeleteProxy(ip);
         }
     }
 }
