@@ -60,12 +60,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ProxyService.svc" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataManger.cs" />
+    <Compile Include="IProxyServiceCallback.cs" />
     <Compile Include="ProxyService.svc.cs">
       <DependentUpon>ProxyService.svc</DependentUpon>
     </Compile>
@@ -76,11 +74,12 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
     </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>

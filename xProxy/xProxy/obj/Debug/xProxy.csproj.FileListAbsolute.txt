@@ -6,3 +6,13 @@ D:\workspace\xProxy\xProxy\bin\Debug\xProxy.exe
 D:\workspace\xProxy\xProxy\bin\Debug\xProxy.pdb
 D:\workspace\xProxy\xProxy\obj\Debug\xProxy.exe
 D:\workspace\xProxy\xProxy\obj\Debug\xProxy.pdb
+D:\温启海的文件夹\项目\xProxy\xProxy\xProxy\bin\Debug\xProxy.exe.config
+D:\温启海的文件夹\项目\xProxy\xProxy\xProxy\obj\Debug\xProxy.exe
+D:\温启海的文件夹\项目\xProxy\xProxy\xProxy\obj\Debug\xProxy.pdb
+D:\温启海的文件夹\项目\xProxy\xProxy\xProxy\bin\Debug\xProxy.exe
+D:\温启海的文件夹\项目\xProxy\xProxy\xProxy\bin\Debug\xProxy.pdb
+D:\温启海的文件夹\项目\xProxy\xProxy\xProxy\bin\Debug\ProxyService.dll
+D:\温启海的文件夹\项目\xProxy\xProxy\xProxy\bin\Debug\ProxyService.pdb
+D:\温启海的文件夹\项目\xProxy\xProxy\xProxy\obj\Debug\xProxy.csprojResolveAssemblyReference.cache
+D:\温启海的文件夹\项目\xProxy\xProxy\xProxy\obj\Debug\xProxy.Properties.Resources.resources
+D:\温启海的文件夹\项目\xProxy\xProxy\xProxy\obj\Debug\xProxy.csproj.GenerateResource.Cache

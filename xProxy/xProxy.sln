@@ -1,11 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xProxy", "xProxy\xProxy.csproj", "{8604F032-C8CD-48FA-8D4C-F1AFF097835C}"
-	ProjectSection(ProjectDependencies) = postProject
-		{D928947E-7CE6-41EE-8570-531088AE9EAD} = {D928947E-7CE6-41EE-8570-531088AE9EAD}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyService", "ProxyService\ProxyService.csproj", "{D928947E-7CE6-41EE-8570-531088AE9EAD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyServer", "ProxyServer\ProxyServer.csproj", "{5F3E46D0-B3E6-4179-A3B9-0C779C1BFA0B}"
@@ -16,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8604F032-C8CD-48FA-8D4C-F1AFF097835C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8604F032-C8CD-48FA-8D4C-F1AFF097835C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8604F032-C8CD-48FA-8D4C-F1AFF097835C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8604F032-C8CD-48FA-8D4C-F1AFF097835C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D928947E-7CE6-41EE-8570-531088AE9EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D928947E-7CE6-41EE-8570-531088AE9EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D928947E-7CE6-41EE-8570-531088AE9EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -2,3 +2,7 @@ C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyService\bin\ProxyService.dll
 C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyService\bin\ProxyService.pdb
 C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyService\obj\Release\ProxyService.dll
 C:\Users\Wen\Documents\GitHub\xProxy\xProxy\ProxyService\obj\Release\ProxyService.pdb
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyService\bin\ProxyService.dll
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyService\bin\ProxyService.pdb
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyService\obj\Release\ProxyService.dll
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyService\obj\Release\ProxyService.pdb
