@@ -31,7 +31,7 @@ namespace ProxyService
             SqlParameter socketPort = new SqlParameter("@SocketPort", info.SocketPort);
             SqlParameter uName = new SqlParameter("@UName", info.UName);
             SqlParameter uPwd = new SqlParameter("@UPwd", info.UPwd);
-            SqlParameter time = new SqlParameter("@Time", DateTime.Now.TimeOfDay.ToString());
+            SqlParameter time = new SqlParameter("@Time", DateTime.Now.Ticks);
             cmd.Parameters.Add(ip);
             cmd.Parameters.Add(httpPort);
             cmd.Parameters.Add(socketPort);
@@ -73,7 +73,7 @@ namespace ProxyService
             var cmd = conn.CreateCommand();
             cmd.CommandText = "UPDATE TProxyClient SET Time=@time WHERE Ip=@ip";
             SqlParameter Ip = new SqlParameter("@ip", ip);
-            SqlParameter time = new SqlParameter("@time", DateTime.Now.TimeOfDay.ToString());
+            SqlParameter time = new SqlParameter("@time", DateTime.Now.Ticks);
             cmd.Parameters.Add(Ip);
             cmd.Parameters.Add(time);
             int count = 0;
