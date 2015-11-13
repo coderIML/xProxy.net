@@ -161,8 +161,8 @@ namespace xProxy
             }
             //socks5 代理      
             UserList.Clear();
-            string Name = "test";
-            string Pwd = "1";
+            string Name = GetRandomStr();
+            string Pwd = getRandomNum(1, 1000, 10000)[0].ToString();
             UserList.AddItem(Name, Pwd);
             listener = CreateListener("xProxy.Socks.SocksListener", string.Format("host:{0};int:{1};authlist", IP, sock5port));
             if (listener != null)
@@ -199,6 +199,13 @@ namespace xProxy
                     Console.WriteLine("注册代理失败：" + e.Message);
                 }
             }
+        }
+
+        private string GetRandomStr()
+        {
+            int[] num = getRandomNum(4, 97, 123);
+            string str = string.Format("{0}{1}{2}{3}", (char)num[0], (char)num[1], (char)num[2], (char)num[3]);
+            return str;
         }
         public void Restart()
         {
