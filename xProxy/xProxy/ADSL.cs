@@ -5,7 +5,7 @@ using System.Text;
 using System.Diagnostics;
 using System.Threading;
 
-namespace XGEmail
+namespace xProxy
 {
     public class ADSL
     {

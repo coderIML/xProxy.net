@@ -14,5 +14,9 @@ namespace ProxyService
 
          [OperationContract(IsOneWay = true)]
          void Exit();
+
+         [OperationContract]
+         bool IsActive();
+
     }
 }

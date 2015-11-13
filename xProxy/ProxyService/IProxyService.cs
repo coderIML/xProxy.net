@@ -38,5 +38,6 @@ namespace ProxyService
         public string UName { get; set; }
         [DataMember]
         public string UPwd { get; set; }
+
     }
 }

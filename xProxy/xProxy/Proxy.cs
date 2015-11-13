@@ -39,9 +39,7 @@ namespace xProxy
             try
             {
                 proxy = new Proxy();
-                ProxyServiceCallBack callback = new ProxyServiceCallBack(proxy);
-                DuplexChannelFactory<IProxyService> channel = new DuplexChannelFactory<IProxyService>(callback, "ProxyClient");
-                service = channel.CreateChannel();
+                InititalChanncel();
                 timer = new System.Timers.Timer(Settings.Default.HeartBeatSpan * 1000);
                 timer.Elapsed+=timer_Elapsed;
             }
@@ -52,6 +50,13 @@ namespace xProxy
                 Console.ReadLine();
             }
             proxy.Start();
+        }
+
+        private static void InititalChanncel()
+        {
+            ProxyServiceCallBack callback = new ProxyServiceCallBack(proxy);
+            DuplexChannelFactory<IProxyService> channel = new DuplexChannelFactory<IProxyService>(callback, "ProxyClient");
+            service = channel.CreateChannel();
         }
 
         private static void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
@@ -131,8 +136,7 @@ namespace xProxy
             string oldip = IP;
             string oldHttpPort = httpport.ToString();
             string oldSocksPort = sock5port.ToString();
-            //IP = GetIP();
-            IP = "192.168.1.29";
+            IP = GetIP();
             if (IP == string.Empty)
                 return;
 
@@ -216,12 +220,25 @@ namespace xProxy
            Console.WriteLine("已停止当前代理");
            Dial();
            Console.WriteLine("正在重启...");
+           InititalChanncel();
            Start();
         }
 
         private void Dial()
         {
-            Console.WriteLine("Dialing...");
+            if (Settings.Default.Dial)
+            {
+                Console.WriteLine("拨号中...");
+                try
+                {
+                    ADSL.ReConnectNet(Settings.Default.ADSLLinkName, Settings.Default.ADSLName, Settings.Default.ADSLPwd);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("拨号失败！" + e.Message);
+                }
+                Console.WriteLine("拨号成功");
+            }
         }
         public void Cancel()
         {
@@ -462,7 +479,6 @@ namespace xProxy
                 m_StartTime = value;
             }
         }
-
 
         private DateTime m_StartTime;
         private ArrayList m_Listeners = new ArrayList();

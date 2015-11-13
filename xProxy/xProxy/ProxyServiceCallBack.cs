@@ -27,6 +27,11 @@ namespace xProxy
             proxy.Cancel();
         }
 
+        public bool IsActive()
+        {
+            return true;
+        }
+
         #endregion
     }
 }

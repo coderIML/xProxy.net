@@ -1,0 +1,11 @@
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyServer\bin\Debug\ProxyServer.exe.config
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyServer\bin\Debug\ProxyServer.exe
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyServer\bin\Debug\ProxyServer.pdb
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyServer\bin\Debug\ProxyService.dll
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyServer\bin\Debug\ProxyService.pdb
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyServer\obj\Debug\ProxyServer.csprojResolveAssemblyReference.cache
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyServer\obj\Debug\ProxyServer.frmMain.resources
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyServer\obj\Debug\ProxyServer.Properties.Resources.resources
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyServer\obj\Debug\ProxyServer.csproj.GenerateResource.Cache
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyServer\obj\Debug\ProxyServer.exe
+D:\温启海的文件夹\项目\xProxy\xProxy\ProxyServer\obj\Debug\ProxyServer.pdb

@@ -13,14 +13,22 @@ namespace ProxyService
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.Single)]
     public class ProxyService : IProxyService
     {
+        static ProxyService instance;
+        public static ProxyService Instance { get { return instance; } }
         public static DataManger dataManager;
         public static Dictionary<string, IProxyServiceCallback> CallBackDic = new Dictionary<string, IProxyServiceCallback>();
+        public static event Action<RegisterEntiy> Registering;
+        public static event Action<string> Canceling;
         public ProxyService()
         {
             string connStr = ConfigurationManager.ConnectionStrings["ProxyDbString"].ConnectionString;
             if (dataManager == null)
             {
                 dataManager = new DataManger(connStr);
+            }
+            if (instance == null)
+            {
+                instance = this;
             }
         }
 
@@ -32,6 +40,7 @@ namespace ProxyService
                 if (dataManager.AddProxy(regInfo))
                 {
                     CallBackDic.Add(regInfo.Ip, callbackInstance);
+                    OnRegistering(regInfo);
                     return true;
                 }
                 else
@@ -41,6 +50,7 @@ namespace ProxyService
             }
             else
             {
+
                 return false;
             }
         }
@@ -57,6 +67,23 @@ namespace ProxyService
                 CallBackDic.Remove(ip);
             }
             dataManager.DeleteProxy(ip);
+            OnCanceling(ip);
+        }
+
+        void OnRegistering(RegisterEntiy regInfo)
+        {
+            if (Registering != null)
+            {
+                Registering(regInfo);
+            }
+        }
+
+        void OnCanceling(string id)
+        {
+            if (Canceling != null)
+            {
+                Canceling(id);
+            }
         }
     }
 }

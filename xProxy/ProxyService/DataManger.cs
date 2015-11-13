@@ -42,7 +42,7 @@ namespace ProxyService
             {
                 cmd.ExecuteNonQuery();
             }
-            catch
+            catch(Exception e)
             {
                 cmd.Dispose();
                 return false;
